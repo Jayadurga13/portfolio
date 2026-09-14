@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayadurga N - Portfolio</title>
+<style>
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --card-bg: #1e293b;
+    --header-bg: #090d16;
+    --header-text: #f8fafc;
+    --accent-color: #38bdf8;
+}
+
+[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --card-bg: #ffffff;
+    --header-bg: #e2e8f0;
+    --header-text: #0f172a;
+    --accent-color: #0284c7;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: radial-gradient(var(--accent-color) 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+}
+
+header h2 {
+    margin:0;
+    color: var(--header-text);
+}
+
+nav a {
+    color: var(--header-text);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.theme-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: opacity 0.2s;
+}
+
+.theme-btn:hover {
+    opacity: 0.9;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    color: var(--text-color);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    scroll-margin-top: 80px;
+}
+
+.section h2 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <h2>JAYADURGA N</h2>
+        <button class="theme-btn" onclick="toggleTheme()">🌓 Theme</button>
+    </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Hi, I'm Jayadurga N 👋</h1>
+    <p>Computer Science Engineering Student & Full-Stack Developer</p>
+</div>
+
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <p>Final year Computer Science undergraduate at Hindusthan College of Engineering and Technology with a strong academic background (CGPA: 9.3). Skilled in Java and Web Development.</p>
+</div>
+
+<div class="section" id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-badge">Java</div>
+        <div class="skill-badge">Spring Boot</div>
+        <div class="skill-badge">HTML</div>
+        <div class="skill-badge">CSS</div>
+        <div class="skill-badge">JavaScript</div>            
+        <div class="skill-badge">Python</div>
+        <div class="skill-badge">SQL</div>
+    </div>
+</div>
+
+<div class="section" id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-card">
+        <h3>Library Management System</h3>
+        <p><strong>Tech:</strong> Java, Spring Boot, MySQL</p>
+        <p>Designed and developed REST APIs to manage core library operations including book inventory, member records, and issue/return transactions.</p>
+    </div>
+</div>
+
+<div class="section" id="experience">
+    <h2>Experience & Internships</h2>
+    <div class="project-card">
+        <h3>Web Developer Intern - Ikasle IT HUB</h3>
+        <p>Collaborated with a 3-member team to develop and maintain the TNJA website, focusing on backend database management and structuring portal data using SQL.</p>
+    </div>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>🌐 <strong>Portfolio:</strong> jayadurga13.github.io/portfolio</p>
+    <p>📧 <strong>Email:</strong> jayadurganatarajan@gmail.com</p>
+    <p>📱 <strong>Phone:</strong> +91 8667002411</p>
+    <p>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jaya-d-b57bb5218" target="_blank">linkedin.com/in/jaya-d-b57bb5218</a></p>
+    <p>🐙 <strong>GitHub:</strong> <a href="https://github.com/Jayadurga13" target="_blank">github.com/Jayadurga13</a></p>
+</div>
+
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    if (html.getAttribute('data-theme') === 'light') {
+        html.removeAttribute('data-theme');
+    } else {
+        html.setAttribute('data-theme', 'light');
+    }
+}
+</script>
+
+</body>
+</html>
